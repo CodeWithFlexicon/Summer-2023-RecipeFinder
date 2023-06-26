@@ -4,6 +4,7 @@ import Recipes from "./Recipes.js";
 import logo from "./assets/logo2.jpg";
 import Header from "./components/Header.jsx";
 import Body from "./components/Body.jsx";
+import RandomRecipe from "./components/RandomRecipe";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -29,6 +30,8 @@ function App() {
     setSearchQuery(query);
   };
 
+  const shouldDisplayRandomRecipe = !selectedCategory && searchQuery === "";
+
   return (
     <div>
       <Header
@@ -37,7 +40,18 @@ function App() {
         onCategorySelect={handleCategorySelect}
         onSearchQueryChange={handleSearchQueryChange}
       />
+      {shouldDisplayRandomRecipe && (
+        <div className="recipe-of-the-day">
+          <h1 className="recipe-of-the-day-title text-bold text-center text-4xl m-4">
+            Recipe of the Day
+          </h1>
+          <RandomRecipe recipes={Recipes} />
+        </div>
+      )}
       <div className="body-container">
+        <h1 className="recipes-title text-bold text-center text-4xl m-4">
+          Recipes
+        </h1>
         <Body recipes={filteredRecipes} />
       </div>
     </div>

@@ -17,7 +17,7 @@ const Header = ({
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow">
+    <header className="fixed top-0 left-0 w-full bg-white shadow z-auto">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Logo logo={logo} />
 

@@ -1,24 +1,25 @@
 import PropTypes from "prop-types";
 import "../styles.css";
 
-const RecipeCard = ({ item }) => {
+const RandomRecipeCard = ({ item }) => {
   const category = Array.isArray(item.category)
     ? item.category.join(" ")
     : item.category;
 
-  RecipeCard.propTypes = {
+  RandomRecipeCard.propTypes = {
     item: PropTypes.object,
   };
 
   return (
-    <div className="recipe-card rounded-lg overflow-hidden transform transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-left-bottom">
+    <div className="random-recipe-card rounded-lg overflow-hidden">
       <img
-        className="w-full h-48 object-cover"
+        className="w-full h-auto object-cover"
+        style={{ aspectRatio: "16/9" }}
         src={item.img}
         alt={item.title}
       />
-      <div className="overflow-hidden shadow-lg hover:shadow-xl flex flex-col h-full">
-        <div className="p-4 bg-white">
+      <div className="overflow-hidden bg-white">
+        <div className="p-4">
           <h3 className="text-xl font-bold mb-2">{item.title}</h3>
           <p className="text-gray-600 line-clamp-4">{item.desc}</p>
         </div>
@@ -31,4 +32,8 @@ const RecipeCard = ({ item }) => {
   );
 };
 
-export default RecipeCard;
+RandomRecipeCard.propTypes = {
+  item: PropTypes.object,
+};
+
+export default RandomRecipeCard;
