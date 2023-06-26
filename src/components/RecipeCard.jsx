@@ -1,10 +1,14 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const RecipeCard = ({ item }) => {
   //Create a variable to check if the item has multiple categories and if so, add a space between each category
   const category = Array.isArray(item.category)
     ? item.category.join(" ")
     : item.category;
+
+  RecipeCard.propTypes = {
+    item: PropTypes.object,
+  };
 
   return (
     <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl h-full">
