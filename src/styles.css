@@ -16,17 +16,16 @@
   justify-items: center;
 }
 
-body {
+/* body {
   margin: 0;
   padding: 0;
-}
+} */
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
   padding: 20px;
 }
 
@@ -79,10 +78,6 @@ body {
 
 .category-item.active {
   font-weight: bold;
-}
-
-.recipe-card {
-  position: relative;
 }
 
 .random-recipe-card {

@@ -11,7 +11,7 @@ const RandomRecipeCard = ({ item }) => {
   };
 
   return (
-    <div className="random-recipe-card rounded-lg overflow-hidden">
+    <div className="random-recipe-card rounded-lg overflow-hidden ">
       <img
         className="w-full h-auto object-cover"
         style={{ aspectRatio: "16/9" }}
