@@ -11,14 +11,14 @@ const RandomRecipeCard = ({ item }) => {
   };
 
   return (
-    <div className="random-recipe-card rounded-lg overflow-hidden ">
+    <div className="random-recipe-card rounded-lg overflow-hidden flex flex-col">
       <img
-        className="w-full h-auto object-cover"
+        className="w-1/2 h-auto object-cover"
         style={{ aspectRatio: "16/9" }}
         src={item.img}
         alt={item.title}
       />
-      <div className="overflow-hidden bg-white">
+      <div className="overflow-hidden bg-white w-1/2 flex flex-col justify-center">
         <div className="p-4">
           <h3 className="text-xl font-bold mb-2">{item.title}</h3>
           <p className="text-gray-600 line-clamp-4">{item.desc}</p>

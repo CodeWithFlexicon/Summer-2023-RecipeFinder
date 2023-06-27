@@ -19,14 +19,17 @@ const Header = ({
   return (
     <header className="fixed top-0 left-0 w-full bg-blue-500 shadow z-10">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <Logo logo={logo} />
+        <div className="flex items-center">
+          <Logo logo={logo} className="mr-2" />
+          <Navbar
+            selectedCategory={selectedCategory}
+            onCategorySelect={onCategorySelect}
+          />
+        </div>
 
-        <Navbar
-          selectedCategory={selectedCategory}
-          onCategorySelect={onCategorySelect}
-        />
-
-        <SearchBar onSearchQueryChange={onSearchQueryChange} />
+        <div className="flex items-center">
+          <SearchBar onSearchQueryChange={onSearchQueryChange} />
+        </div>
       </div>
     </header>
   );

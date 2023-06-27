@@ -17,10 +17,10 @@ const RecipeCard = ({ item }) => {
         src={item.img}
         alt={item.title}
       />
-      <div className="overflow-hidden shadow-lg hover:shadow-xl flex flex-col h-full">
+      <div className="overflow-hidden shadow-lg hover:shadow-xl">
         <div className="p-4 bg-white">
           <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-          <p className="text-gray-600 line-clamp-4">{item.desc}</p>
+          <p className="text-gray-600 line-clamp-2">{item.desc}</p>
         </div>
         <div className="bg-blue-200 px-4 py-2 flex justify-between">
           <span className="text-gray-800 font-bold">{category}</span>

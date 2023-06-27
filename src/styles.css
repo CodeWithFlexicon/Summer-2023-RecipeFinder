@@ -3,10 +3,9 @@
 @import "tailwindcss/utilities";
 
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: rgb(176, 250, 225);
+  background-color: rgb(207, 254, 194);
 }
 
 .row {
@@ -14,12 +13,13 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 1rem;
   justify-items: center;
+  grid-auto-rows: 1fr;
 }
 
-/* body {
+body {
   margin: 0;
   padding: 0;
-} */
+}
 
 .header {
   position: fixed;
@@ -32,15 +32,18 @@
 .body-container {
   margin-top: 80px;
   padding: 20px;
+  background-color: rgb(207, 254, 194);
 }
 
 .recipe-of-the-day {
   margin-top: 80px;
   padding: 20px;
+  background-color: rgb(248, 252, 172);
 }
 
 .navbar {
   position: relative;
+  padding-left: 40px;
 }
 
 .dropdown {
@@ -82,4 +85,10 @@
 
 .random-recipe-card {
   max-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-card-container {
+  justify-content: stretch;
 }

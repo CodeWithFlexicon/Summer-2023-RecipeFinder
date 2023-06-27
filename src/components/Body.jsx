@@ -5,11 +5,13 @@ const Body = ({ recipes }) => {
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
-      style={{ gridAutoRows: "minmax(200px, auto)" }}
+      style={{ gridAutoRows: "1fr" }}
     >
       {recipes.map((recipe) => (
-        <div key={recipe.id}>
-          <RecipeCard item={recipe} />
+        <div key={recipe.id} className="flex items-stretch">
+          <div className="recipe-card-container">
+            <RecipeCard item={recipe} />
+          </div>
         </div>
       ))}
     </div>
