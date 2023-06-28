@@ -38,7 +38,7 @@ body {
 .recipe-of-the-day {
   margin-top: 80px;
   padding: 20px;
-  background-color: rgb(248, 252, 172);
+  background-color: rgb(252, 253, 234);
 }
 
 .navbar {
@@ -91,4 +91,37 @@ body {
 
 .recipe-card-container {
   justify-content: stretch;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipe-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-card-content > div {
+  flex-grow: 1;
+}
+
+.recipe-desc {
+  word-break: break-word;
+  white-space: pre-line;
 }

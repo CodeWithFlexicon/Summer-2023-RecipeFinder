@@ -4,10 +4,11 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles.css";
 
-const Navbar = ({ selectedCategory, onCategorySelect }) => {
+const Navbar = ({ selectedCategory, onCategorySelect, showModal }) => {
   Navbar.propTypes = {
     selectedCategory: PropTypes.string,
     onCategorySelect: PropTypes.func,
+    showModal: PropTypes.func,
   };
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -35,15 +36,15 @@ const Navbar = ({ selectedCategory, onCategorySelect }) => {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar flex items-center">
       <div
         className={`dropdown ${isDropdownOpen ? "open" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="dropdown-toggle">
+        <div className="dropdown-toggle text-md">
           Categories
-          <FontAwesomeIcon icon={faCaretDown} />
+          <FontAwesomeIcon className="mx-2" icon={faCaretDown} />
         </div>
         {isDropdownOpen && (
           <div className="popup-box">
@@ -63,6 +64,9 @@ const Navbar = ({ selectedCategory, onCategorySelect }) => {
           </div>
         )}
       </div>
+      <button className="add-recipe mx-10 text-md" onClick={() => showModal()}>
+        Add Recipe
+      </button>
     </div>
   );
 };

@@ -8,28 +8,37 @@ const Header = ({
   selectedCategory,
   onCategorySelect,
   onSearchQueryChange,
+  showModal,
+  resetSearchQuery,
 }) => {
   Header.propTypes = {
     logo: PropTypes.string,
     selectedCategory: PropTypes.string,
     onCategorySelect: PropTypes.func,
     onSearchQueryChange: PropTypes.func,
+    showModal: PropTypes.func,
+    resetSearchQuery: PropTypes.func,
+  };
+
+  const handleCategorySelect = (category) => {
+    // Reset the search query when a category is selected
+    resetSearchQuery();
+    onCategorySelect(category);
   };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-blue-500 shadow z-10">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <div className="flex items-center">
-          <Logo logo={logo} className="mr-2" />
+        <div className="flex items-center space-x-4">
+          <Logo logo={logo} />
           <Navbar
             selectedCategory={selectedCategory}
-            onCategorySelect={onCategorySelect}
+            onCategorySelect={handleCategorySelect}
+            showModal={showModal}
           />
         </div>
 
-        <div className="flex items-center">
-          <SearchBar onSearchQueryChange={onSearchQueryChange} />
-        </div>
+        <SearchBar onSearchQueryChange={onSearchQueryChange} />
       </div>
     </header>
   );

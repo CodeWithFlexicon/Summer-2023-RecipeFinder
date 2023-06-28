@@ -5,12 +5,16 @@ import logo from "./assets/logo2.jpg";
 import Header from "./components/Header.jsx";
 import Body from "./components/Body.jsx";
 import RandomRecipe from "./components/RandomRecipe";
+import RecipeModal from "./ui/RecipeModal";
+import AddRecipeForm from "./components/AddRecipeForm";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [recipes, setRecipes] = useState(Recipes);
 
-  const filteredRecipes = Recipes.filter((recipe) => {
+  const filteredRecipes = recipes.filter((recipe) => {
     const recipeCategories = recipe.category || [];
     const isMatchedCategory =
       !selectedCategory || recipeCategories.includes(selectedCategory);
@@ -21,13 +25,40 @@ function App() {
     return isMatchedCategory && isMatchedSearchQuery;
   });
 
+  const resetSearchBarInput = () => {
+    const searchBarInput = document.querySelector(".search-bar-input");
+    if (searchBarInput) {
+      searchBarInput.value = "";
+    }
+  };
+
+  //Should handle the category selection and when we change the category, we empty the search query
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setSearchQuery("");
+    resetSearchBarInput();
   };
 
+  //This just handles the query string
   const handleSearchQueryChange = (query) => {
     setSearchQuery(query);
+  };
+
+  //Show the Modal
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  //Hide the Modal
+  const hideModal = () => {
+    setIsModalVisible(false);
+  };
+
+  //When we add a new recipe, we need to add it to the list of recipes
+  const onAddRecipe = (newRecipe) => {
+    hideModal();
+
+    setRecipes((prevRecipes) => [...prevRecipes, newRecipe]);
   };
 
   const shouldDisplayRandomRecipe = !selectedCategory && searchQuery === "";
@@ -39,6 +70,9 @@ function App() {
         selectedCategory={selectedCategory}
         onCategorySelect={handleCategorySelect}
         onSearchQueryChange={handleSearchQueryChange}
+        showModal={showModal}
+        hideModal={hideModal}
+        resetSearchQuery={resetSearchBarInput}
       />
       {shouldDisplayRandomRecipe && (
         <div className="recipe-of-the-day">
@@ -54,6 +88,9 @@ function App() {
         </h1>
         <Body recipes={filteredRecipes} />
       </div>
+      <RecipeModal isVisible={isModalVisible} hideModal={hideModal}>
+        <AddRecipeForm onAddRecipe={onAddRecipe} recipes={recipes} />
+      </RecipeModal>
     </div>
   );
 }
