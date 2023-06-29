@@ -117,9 +117,9 @@ body {
   justify-content: space-between;
 }
 
-.recipe-card-content > div {
+/* .recipe-card-content > div {
   flex-grow: 1;
-}
+} */
 
 .recipe-desc {
   word-break: break-word;

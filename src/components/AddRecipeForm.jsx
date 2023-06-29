@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const AddRecipeForm = ({ onAddRecipe, recipes }) => {
+const AddRecipeForm = ({ onAddRecipe }) => {
   AddRecipeForm.propTypes = {
     onAddRecipe: PropTypes.func,
     recipes: PropTypes.array,
@@ -45,7 +45,7 @@ const AddRecipeForm = ({ onAddRecipe, recipes }) => {
     });
   };
 
-  const handleAddRecipeSubmit = (e) => {
+  const handleAddRecipeSubmit = async (e) => {
     e.preventDefault();
 
     const errors = validateForm();
@@ -53,14 +53,23 @@ const AddRecipeForm = ({ onAddRecipe, recipes }) => {
       setFormErrors({});
 
       const newRecipe = {
-        id: (recipes.length + 1).toString(),
         title: recipeFormState.title,
         category: recipeFormState.category,
         img: recipeFormState.img,
         desc: recipeFormState.desc,
       };
 
-      onAddRecipe(newRecipe);
+      const response = await fetch("http://localhost:3000/recipes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newRecipe),
+      });
+      console.log("response: ", response);
+      const savedRecipe = await response.json();
+      console.log("Saved recipe: ", savedRecipe);
+      onAddRecipe(savedRecipe);
       // Clear the form after submitting
       setRecipeFormState(initialRecipeFormState);
     } else {

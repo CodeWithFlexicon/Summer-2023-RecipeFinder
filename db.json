@@ -1,0 +1,76 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Macarons",
+      "category": ["Dessert", "Cookie"],
+      "price": "$20",
+      "img": "https://preppykitchen.com/wp-content/uploads/2020/04/French-Macarons-feature-1200.jpg",
+      "desc": " This easy French macaron recipe makes a batch of the most dainty, delicate, and delicious cookies that will float right into your mouth and disappear. "
+    },
+    {
+      "id": "2",
+      "title": "Chicken Tikka Masala",
+      "category": ["Lunch", "Dinner"],
+      "price": "$20",
+      "img": "https://hips.hearstapps.com/hmg-prod/images/chicken-tikka-masala1-1663341991.jpg?crop=0.683xw:1.00xh;0.221xw,0&resize=1200:*",
+      "desc": "You’ve been itching for a change recently. You know, something to spice things up and throw a spanner into the monotony of routine. Enter: chicken tikka masala. Sure, it might take two days to throw together, but when you pair it with some fluffy steamed rice or buttery, garlic naan, it’s well worth the wait."
+    },
+    {
+      "id": "3",
+      "title": "Avocado Toast with Egg",
+      "category": "Breakfast",
+      "price": "$10",
+      "img": "https://www.skinnytaste.com/wp-content/uploads/2015/01/Avocado-Toast-with-Egg-8.jpg",
+      "desc": "This healthy, avocado toast recipe is made on whole grain toast with mashed avocado, and your favorite egg. You can make this with a hard boiled egg, sunny side up, scrambled, or poached. If you’re like me, you make even want to add a few dashes of hot sauce! Adding egg to avocado toast is an easy way to add protein to breakfast toast. If you want a vegan option, you might also like this avocado toast with lemon and kale."
+    },
+    {
+      "id": "4",
+      "title": "Avocado Lox Toast",
+      "category": "Lunch",
+      "price": "$12",
+      "img": "https://www.seriouseats.com/thmb/lVZskabVRdVqcJIUeD3OJlD-mI0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__05__20160502-avocado-toast-vicky-wasik-salmon-8-a7a4152ebdf3456a9df61ee9dd1179d6.jpg",
+      "desc": "This bagel-and-lox-inspired open-faced sandwich combines avocado and smoked salmon, cut through with tomatoes, capers, and thinly sliced rounds of red onion. Goat cheese takes the place of cream cheese for extra tang, while a squeeze of lemon juice and a little fresh black pepper bring everything into balance."
+    },
+    {
+      "id": "5",
+      "title": "Creamy Zucchini Pasta",
+      "category": "Lunch",
+      "price": "$8",
+      "img": "https://www.simplyrecipes.com/thmb/eQL0hGoHyjkeIeOvfT7Am75JWm8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Creamy-One-Pot-Pasta-with-Zucchini-LEAD-7-871d64f3fd8a40189c29c7b8d1afdac4.jpg",
+      "desc": "The beauty of this recipe is that it all goes down in one pot. After the zucchini is caramelized, you’ll cook the pasta with cream cheese in just enough water for the pasta to cook without being left with a pool of liquid. If all the moisture cooks off and the pasta is still undercooked, you can always add an extra splash of water. The cooked zucchini is then added back to the pot, along with some lemon juice and zest, and you’ve got yourself a hearty bowl of summertime pasta. "
+    },
+    {
+      "id": "6",
+      "title": "Perfect Burger?",
+      "category": ["Lunch", "Dinner"],
+      "price": "$17",
+      "img": "https://i0.wp.com/www.aspicyperspective.com/wp-content/uploads/2020/05/Best-Hamburger-Patty-Recipe-17.jpg?resize=650%2C975&ssl=1",
+      "desc": "These burgers offer a rich and meaty taste, with a punch of zesty herbs that can be customized with your preferred flavors. A few simple key ingredients help to consistently create juicy hamburger patties, no matter which cooking method you prefer."
+    },
+    {
+      "id": "7",
+      "title": "Beef Stew",
+      "category": "Dinner",
+      "price": "$22",
+      "img": "https://static01.nyt.com/images/2022/01/02/dining/15COOKING-OLD-BEEF-STEW2/15COOKING-OLD-BEEF-STEW2-master768-v2.jpg?w=1280&q=75",
+      "desc": "This classic stick-to-your-ribs stew is the ideal project for a chilly weekend. Beef, onion, carrots, potatoes and red wine come together in cozy harmony. If you are feeding a crowd, good news: It doubles (or triples) beautifully."
+    },
+    {
+      "id": "8",
+      "title": "Dum Alloo",
+      "category": "Dinner",
+      "price": "$15",
+      "img": "https://i.ndtvimg.com/i/2015-06/indian-dinner_625x350_51434362664.jpg",
+      "desc": "Your family will thank you for this fantastic bowl of dum aloo cooked Lakhnawi style. Take some potatoes, crumbled paneer, kasuri methi, butter, onions, and some ghee."
+    },
+    {
+      "id": "9",
+      "title": "Malai Kofta",
+      "category": ["Dinner", "Snacks"],
+      "price": "$14",
+      "img": "https://i.ndtvimg.com/i/2017-10/makhmali-kofte_620x350_51508918483.jpg",
+      "desc": "A rich gravy made of khus khus, coconut and milk that tastes best with koftas made from khoya. This velvety and creamy recipe will leave you licking your fingers. Makhmali kofte can be your go-to dish for dinner parties as this is quite different from other kofta recipes and extremely delicious."
+    }
+  ]
+}

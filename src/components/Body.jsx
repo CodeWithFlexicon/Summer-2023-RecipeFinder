@@ -23,12 +23,16 @@ const Body = ({ recipes }) => {
   );
 };
 
-Body.propTypes = {
+/* Body.propTypes = {
   recipes: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
     })
   ),
+}; */
+
+Body.propTypes = {
+  recipes: PropTypes.array,
 };
 
 export default Body;

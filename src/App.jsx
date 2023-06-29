@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Recipes from "./Recipes.js";
 import logo from "./assets/logo2.jpg";
 import Header from "./components/Header.jsx";
@@ -12,7 +12,17 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [recipes, setRecipes] = useState(Recipes);
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    async function fetchRecipes() {
+      const response = await fetch("http://localhost:3000/recipes");
+      const recipes = await response.json();
+      setRecipes(recipes);
+    }
+
+    fetchRecipes();
+  }, []);
 
   const filteredRecipes = recipes.filter((recipe) => {
     const recipeCategories = recipe.category || [];
@@ -89,7 +99,7 @@ function App() {
         <Body recipes={filteredRecipes} />
       </div>
       <RecipeModal isVisible={isModalVisible} hideModal={hideModal}>
-        <AddRecipeForm onAddRecipe={onAddRecipe} recipes={recipes} />
+        <AddRecipeForm onAddRecipe={onAddRecipe} />
       </RecipeModal>
     </div>
   );

@@ -13,7 +13,7 @@ const RecipeCard = ({ item }) => {
   return (
     <div className="recipe-card rounded-lg overflow-hidden transform transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-left-bottom">
       <img
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover object-fill"
         src={item.img}
         alt={item.title}
       />
