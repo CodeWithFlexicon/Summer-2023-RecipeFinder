@@ -1,7 +1,8 @@
-import Logo from "./Logo";
-import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
+import Logo from "../components/Logo";
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Header = ({
   logo,
@@ -30,7 +31,9 @@ const Header = ({
     <header className="fixed top-0 left-0 w-full bg-blue-500 shadow z-10">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <div className="flex items-center space-x-4">
-          <Logo logo={logo} />
+          <Link to={"/"}>
+            <Logo logo={logo} />
+          </Link>
           <Navbar
             selectedCategory={selectedCategory}
             onCategorySelect={handleCategorySelect}

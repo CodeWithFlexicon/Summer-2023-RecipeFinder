@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Macarons",
       "category": ["Dessert", "Cookie"],
       "price": "$20",
@@ -9,7 +9,7 @@
       "desc": " This easy French macaron recipe makes a batch of the most dainty, delicate, and delicious cookies that will float right into your mouth and disappear. "
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Chicken Tikka Masala",
       "category": ["Lunch", "Dinner"],
       "price": "$20",
@@ -17,7 +17,7 @@
       "desc": "You’ve been itching for a change recently. You know, something to spice things up and throw a spanner into the monotony of routine. Enter: chicken tikka masala. Sure, it might take two days to throw together, but when you pair it with some fluffy steamed rice or buttery, garlic naan, it’s well worth the wait."
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "Avocado Toast with Egg",
       "category": "Breakfast",
       "price": "$10",
@@ -25,7 +25,7 @@
       "desc": "This healthy, avocado toast recipe is made on whole grain toast with mashed avocado, and your favorite egg. You can make this with a hard boiled egg, sunny side up, scrambled, or poached. If you’re like me, you make even want to add a few dashes of hot sauce! Adding egg to avocado toast is an easy way to add protein to breakfast toast. If you want a vegan option, you might also like this avocado toast with lemon and kale."
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "Avocado Lox Toast",
       "category": "Lunch",
       "price": "$12",
@@ -33,7 +33,7 @@
       "desc": "This bagel-and-lox-inspired open-faced sandwich combines avocado and smoked salmon, cut through with tomatoes, capers, and thinly sliced rounds of red onion. Goat cheese takes the place of cream cheese for extra tang, while a squeeze of lemon juice and a little fresh black pepper bring everything into balance."
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "Creamy Zucchini Pasta",
       "category": "Lunch",
       "price": "$8",
@@ -41,7 +41,7 @@
       "desc": "The beauty of this recipe is that it all goes down in one pot. After the zucchini is caramelized, you’ll cook the pasta with cream cheese in just enough water for the pasta to cook without being left with a pool of liquid. If all the moisture cooks off and the pasta is still undercooked, you can always add an extra splash of water. The cooked zucchini is then added back to the pot, along with some lemon juice and zest, and you’ve got yourself a hearty bowl of summertime pasta. "
     },
     {
-      "id": "6",
+      "id": 6,
       "title": "Perfect Burger?",
       "category": ["Lunch", "Dinner"],
       "price": "$17",
@@ -49,7 +49,7 @@
       "desc": "These burgers offer a rich and meaty taste, with a punch of zesty herbs that can be customized with your preferred flavors. A few simple key ingredients help to consistently create juicy hamburger patties, no matter which cooking method you prefer."
     },
     {
-      "id": "7",
+      "id": 7,
       "title": "Beef Stew",
       "category": "Dinner",
       "price": "$22",
@@ -57,7 +57,7 @@
       "desc": "This classic stick-to-your-ribs stew is the ideal project for a chilly weekend. Beef, onion, carrots, potatoes and red wine come together in cozy harmony. If you are feeding a crowd, good news: It doubles (or triples) beautifully."
     },
     {
-      "id": "8",
+      "id": 9,
       "title": "Dum Alloo",
       "category": "Dinner",
       "price": "$15",
@@ -65,7 +65,7 @@
       "desc": "Your family will thank you for this fantastic bowl of dum aloo cooked Lakhnawi style. Take some potatoes, crumbled paneer, kasuri methi, butter, onions, and some ghee."
     },
     {
-      "id": "9",
+      "id": 10,
       "title": "Malai Kofta",
       "category": ["Dinner", "Snacks"],
       "price": "$14",

@@ -2,11 +2,12 @@ import "./styles.css";
 import { useState, useEffect } from "react";
 import Recipes from "./Recipes.js";
 import logo from "./assets/logo2.jpg";
-import Header from "./components/Header.jsx";
-import Body from "./components/Body.jsx";
+import Header from "./routes/Header.jsx";
+import Body from "./routes/Body.jsx";
 import RandomRecipe from "./components/RandomRecipe";
 import RecipeModal from "./ui/RecipeModal";
 import AddRecipeForm from "./components/AddRecipeForm";
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -97,6 +98,7 @@ function App() {
           Recipes
         </h1>
         <Body recipes={filteredRecipes} />
+        {/* <Outlet /> */}
       </div>
       <RecipeModal isVisible={isModalVisible} hideModal={hideModal}>
         <AddRecipeForm onAddRecipe={onAddRecipe} />

@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
-import RecipeCard from "./RecipeCard";
+import RecipeCard from "../components/RecipeCard";
 
 const Body = ({ recipes }) => {
+  Body.propTypes = {
+    recipes: PropTypes.array,
+  };
+
   if (recipes.length === 0) {
     // Return null when there are no recipes to display
     return null;
@@ -12,8 +16,8 @@ const Body = ({ recipes }) => {
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
       style={{ gridAutoRows: "1fr" }}
     >
-      {recipes.map((recipe) => (
-        <div key={recipe.id} className="flex items-stretch">
+      {recipes.map((recipe, i) => (
+        <div recipe={recipe} key={i} className="flex items-stretch">
           <div className="recipe-card-container flex-grow">
             <RecipeCard item={recipe} />
           </div>
@@ -30,9 +34,5 @@ const Body = ({ recipes }) => {
     })
   ),
 }; */
-
-Body.propTypes = {
-  recipes: PropTypes.array,
-};
 
 export default Body;
