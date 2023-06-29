@@ -13,13 +13,15 @@ const RecipeCard = ({ item }) => {
   return (
     <div className="recipe-card rounded-lg overflow-hidden transform transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-left-bottom">
       <img
-        className="w-full h-48 object-cover object-fill"
+        className="w-full h-48 object-cover object-fill flex-shrink-0"
         src={item.img}
         alt={item.title}
       />
-      <div className="h-full flex flex-col">
+      <div className="flex flex-col h-full">
         <div className="flex-grow flex flex-col">
-          <div className="recipe-desc-content p-4 bg-white flex-grow">
+          <div className="recipe-desc-content p-4 bg-white flex-grow flex flex-col">
+            {" "}
+            {/* Modified */}
             <h3 className="text-xl font-bold mb-2">{item.title}</h3>
             <p className="text-gray-600 line-clamp-3 recipe-desc break-words">
               {item.desc}
