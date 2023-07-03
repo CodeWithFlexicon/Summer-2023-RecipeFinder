@@ -125,3 +125,21 @@ body {
   word-break: break-word;
   white-space: pre-line;
 }
+
+.root-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex: 1;
+  margin-top: 100px; /* Adjust this value to match your header height */
+  padding: 16px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 25px;
+}

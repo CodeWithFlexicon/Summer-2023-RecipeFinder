@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import RecipeCard from "../components/RecipeCard";
+import RecipeCard from "./RecipeCard";
 
 const Body = ({ recipes }) => {
   Body.propTypes = {

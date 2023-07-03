@@ -2,20 +2,19 @@ import "./styles.css";
 import { useState, useEffect } from "react";
 import Recipes from "./Recipes.js";
 import logo from "./assets/logo2.jpg";
-import Header from "./routes/Header.jsx";
-import Body from "./routes/Body.jsx";
+import Header from "./components/Header.jsx";
+import Body from "./components/Body.jsx";
 import RandomRecipe from "./components/RandomRecipe";
 import RecipeModal from "./ui/RecipeModal";
 import AddRecipeForm from "./components/AddRecipeForm";
 import { Outlet, Link } from "react-router-dom";
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [recipes, setRecipes] = useState([]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     async function fetchRecipes() {
       const response = await fetch("http://localhost:3000/recipes");
       const recipes = await response.json();
@@ -23,7 +22,7 @@ function App() {
     }
 
     fetchRecipes();
-  }, []);
+  }, []); */
 
   const filteredRecipes = recipes.filter((recipe) => {
     const recipeCategories = recipe.category || [];

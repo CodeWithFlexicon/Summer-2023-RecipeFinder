@@ -1,6 +1,6 @@
-import Logo from "../components/Logo";
-import Navbar from "../components/Navbar";
-import SearchBar from "../components/SearchBar";
+import Logo from "./Logo";
+import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
