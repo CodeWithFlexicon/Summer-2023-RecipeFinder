@@ -41,7 +41,7 @@ const Header = ({
           />
         </div>
 
-        <SearchBar onSearchQueryChange={onSearchQueryChange} />
+        <SearchBar onSearch={onSearchQueryChange} />
       </div>
     </header>
   );

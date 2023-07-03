@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { FaCaretDown } from "react-icons/fa";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -43,16 +42,18 @@ const Navbar = ({ selectedCategory }) => {
     <>
       <div className="navbar flex items-center">
         <div
-          className={`dropdown ${isDropdownOpen ? "open" : ""}`}
+          className={`dropdown relative inline-block ${
+            isDropdownOpen ? "open" : ""
+          }`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="dropdown-toggle text-md">
-            Categories
-            <FontAwesomeIcon className="mx-2" icon={faCaretDown} />
+          <div className="dropdown-toggle flex items-center text-md cursor-pointer">
+            <span className="category-title">Categories</span>
+            <FaCaretDown className="caret-icon" />
           </div>
           {isDropdownOpen && (
-            <div className="popup-box">
+            <div className="popup-box absolute top-full left-0 bg-white border border-gray-300 p-2 w-40">
               <ul className="category-list">
                 {options.map((option) => (
                   <li
@@ -61,7 +62,9 @@ const Navbar = ({ selectedCategory }) => {
                       selectedCategory === option.value ? "active" : ""
                     }`}
                   >
-                    <Link to={`/recipes/${option.value}`}>{option.label}</Link>
+                    <Link to={`/recipes/category/${option.value}`}>
+                      {option.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -10,6 +10,9 @@ import RecipeList, {
 import AddRecipeForm, {
   action as recipeFormAction,
 } from "./components/AddRecipeForm";
+import SearchResults from "./routes/SearchResults";
+import EditRecipe from "./routes/editRecipe";
+import RecipePage from "./components/RecipePage";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +31,16 @@ const router = createBrowserRouter([
         loader: recipeLoader,
       },
       {
-        path: "/recipes/:category",
+        path: "/recipes/:title",
+        element: <RecipePage />,
+      },
+      {
+        path: "/recipes/category/:category",
+        element: <RecipeList />,
+        loader: recipeLoader,
+      },
+      {
+        path: "/recipes/category/",
         element: <RecipeList />,
         loader: recipeLoader,
       },
@@ -37,6 +49,14 @@ const router = createBrowserRouter([
         element: <AddRecipeForm />,
         action: recipeFormAction,
       },
+      {
+        path: "search",
+        element: <SearchResults />,
+      },
+      /*       {
+        path: "recipes/:recipeId/edit",
+        element: <EditRecipe />,
+      }, */
     ],
   },
 ]);

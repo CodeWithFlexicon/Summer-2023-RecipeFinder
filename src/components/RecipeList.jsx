@@ -32,10 +32,15 @@ const RecipeList = () => {
     </div>
   ));
 
+  const categoryTitle =
+    category === "all categories" || category === undefined
+      ? "All Recipes"
+      : `${category} Recipes`;
+
   return (
     <div>
       <div className="recipes-title text-4xl font-bold text-center mb-4">
-        {category} Recipes
+        {categoryTitle}
       </div>
       <div className="recipe-grid grid grid-cols-4 gap-4">{recipeCards}</div>
     </div>

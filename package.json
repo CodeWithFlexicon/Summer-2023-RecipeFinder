@@ -11,15 +11,12 @@
     "database": "json-server --watch db.json"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dropdown-select": "^4.9.4",
+    "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.0",
     "sort-by": "^1.2.0"
   },
@@ -29,7 +26,6 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.38.0",
-    "eslint-plugin-react": "^7.25.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "postcss": "^8.4.24",
