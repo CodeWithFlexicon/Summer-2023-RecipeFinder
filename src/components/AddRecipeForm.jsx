@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, redirect } from "react-router-dom";
+import { Form, redirect, useNavigate } from "react-router-dom";
 
 export async function action(recipeData) {
   try {
@@ -25,6 +25,7 @@ export async function action(recipeData) {
 
 const AddRecipeForm = () => {
   const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
 
   const handleCategoryChange = (event) => {
     const selectedCategory = event.target.value;
@@ -54,7 +55,8 @@ const AddRecipeForm = () => {
     await action(recipeData);
 
     // Redirect to the recipes page
-    return redirect("/recipes");
+    //return redirect("/recipes");
+    navigate("/recipes");
   };
 
   return (
