@@ -18,8 +18,7 @@ const Root = () => {
 
     // Perform search action based on the search query
     // For example, you can navigate to a search results page with the search query as a parameter
-    //navigate(`/search?query=${searchQuery}`);
-    redirect(`/search?query=${searchQuery}`);
+    navigate(`/recipes/search?query=${searchQuery}`);
 
     setSearchQuery("");
   };
@@ -65,9 +64,9 @@ const Root = () => {
             </div>
             <button
               type="submit"
-              className="bg-green-500 text-white rounded ml-4 hover:bg-green-900"
+              className="bg-slate-400 text-white rounded hover:bg-slate-700 flex items-center px-4 py-2"
             >
-              <GiKnifeFork className="mr-2" />
+              <GiKnifeFork />
             </button>
           </form>
         </div>

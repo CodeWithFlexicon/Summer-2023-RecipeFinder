@@ -11,8 +11,12 @@ import AddRecipeForm, {
   action as recipeFormAction,
 } from "./components/AddRecipeForm";
 import SearchResults from "./routes/SearchResults";
-import EditRecipe from "./routes/editRecipe";
+import EditRecipe, {
+  loader as recipeEditLoader,
+  action as recipeEditAction,
+} from "./routes/editRecipe";
 import RecipePage from "./components/RecipePage";
+import { action as recipeDeleteAction } from "./routes/deleteRecipe";
 
 const router = createBrowserRouter([
   {
@@ -50,13 +54,19 @@ const router = createBrowserRouter([
         action: recipeFormAction,
       },
       {
-        path: "search",
+        path: "/recipes/search",
         element: <SearchResults />,
       },
-      /*       {
+      {
         path: "recipes/:recipeId/edit",
         element: <EditRecipe />,
-      }, */
+        loader: recipeEditLoader,
+        action: recipeEditAction,
+      },
+      {
+        path: "recipes/:recipeTitle/delete",
+        action: recipeDeleteAction,
+      },
     ],
   },
 ]);
