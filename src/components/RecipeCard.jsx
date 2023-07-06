@@ -1,6 +1,7 @@
 import "../styles.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { RxTimer } from "react-icons/rx";
 
 const RecipeCard = ({ item }) => {
   const category = Array.isArray(item.category)
@@ -21,17 +22,20 @@ const RecipeCard = ({ item }) => {
         />
         <div className="flex flex-col h-full">
           <div className="flex-grow flex flex-col">
-            <div className="recipe-desc-content p-4 bg-white flex-grow flex flex-col">
+            <div className="recipe-desc-content p-4 bg-gray-100 flex-grow flex flex-col">
               {" "}
-              {/* Modified */}
               <h3 className="text-xl font-bold mb-2">{item.title}</h3>
               <p className="text-gray-600 line-clamp-3 recipe-desc break-words">
                 {item.desc}
               </p>
             </div>
-            <div className="bg-blue-200 px-4 py-2 flex justify-between">
-              <span className="text-gray-800 font-bold">{category}</span>
-              <span className="text-gray-600">{item.price}</span>
+            <div className="bg-blue-200 px-4 py-2 flex justify-between items-center">
+              {/*  <span className="text-gray-800 font-bold">{category}</span> */}
+
+              <div className="text-black-600 flex items-center">
+                <RxTimer />
+                {item.preparation} Minutes
+              </div>
             </div>
           </div>
         </div>

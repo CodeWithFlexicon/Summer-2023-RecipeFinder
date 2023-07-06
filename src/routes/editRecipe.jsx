@@ -48,6 +48,7 @@ function EditRecipe() {
 
   const [editedRecipeData, setEditedRecipeData] = useState({
     title: recipe.title,
+    preparation: recipe.preparation,
     category: recipe.category,
     desc: recipe.desc,
     img: recipe.img,
@@ -174,6 +175,16 @@ function EditRecipe() {
           />
         </div>
         <div className="mb-4">
+          <label className="block mb-1">Prep Time</label>
+          <input
+            type="number"
+            name="preparation"
+            className="w-full px-3 py-2 border border-gray-300 rounded"
+            value={editedRecipeData.preparation}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="mb-4">
           <label className="block mb-1">Category</label>
           <div>
             <label className="mr-2">
@@ -253,7 +264,7 @@ function EditRecipe() {
               <button
                 type="button"
                 className="ml-2 text-red-500 focus:outline-none"
-                onClick={() => handleRemoveInstruction(index)}
+                onClick={() => handleRemoveIngredient(index)}
               >
                 Remove
               </button>
@@ -262,9 +273,9 @@ function EditRecipe() {
           <button
             type="button"
             className="text-green-500 focus:outline-none"
-            onClick={handleAddInstruction}
+            onClick={handleAddIngredient}
           >
-            Add Instruction
+            Add Ingredient
           </button>
         </div>
         <div className="mb-4">

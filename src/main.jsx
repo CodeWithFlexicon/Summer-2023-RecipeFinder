@@ -17,6 +17,7 @@ import EditRecipe, {
 } from "./routes/editRecipe";
 import RecipePage from "./components/RecipePage";
 import { action as recipeDeleteAction } from "./routes/deleteRecipe";
+import Home from "./routes/Home";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <RecipeList />,
-        loader: recipeLoader,
+        element: <Home />,
       },
       {
         path: "/recipes/",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         path: "recipes/:recipeId/edit",
         element: <EditRecipe />,
         loader: recipeEditLoader,
-        action: recipeEditAction,
+        //action: recipeEditAction,
       },
       {
         path: "recipes/:recipeTitle/delete",

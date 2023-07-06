@@ -88,6 +88,7 @@ const AddRecipeForm = () => {
     // Create recipe object with form data including selected categories, ingredients, and instructions
     const recipeData = {
       title: event.target.elements.title.value,
+      preparation: event.target.elements.preparation.value,
       category: categories,
       desc: event.target.elements.desc.value,
       img: event.target.elements.img.value,
@@ -105,7 +106,7 @@ const AddRecipeForm = () => {
   return (
     <Form
       method="post"
-      className="w-full max-w-md mx-auto p-4 bg-gray-100 rounded-lg"
+      className="w-full max-w-2xl h-full max-h-10xl mx-auto p-4 bg-gray-200 rounded-lg"
       onSubmit={handleFormSubmit}
     >
       <div className="mb-4">
@@ -117,6 +118,13 @@ const AddRecipeForm = () => {
           required
         />
       </div>
+      <label className="block mb-1">Prep Time</label>
+      <input
+        type="number"
+        name="preparation"
+        className="w-full border border-gray-300 rounded-lg px-3 py-2"
+        required
+      />
       <div className="mb-4">
         <label className="block mb-1">Category</label>
         <div className="flex flex-wrap">

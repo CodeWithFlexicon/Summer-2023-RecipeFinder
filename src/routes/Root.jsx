@@ -32,8 +32,9 @@ const Root = () => {
       <header className="fixed top-0 left-0 w-full bg-blue-500 shadow z-10">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <div className="flex items-center space-x-4">
-            <Link to="/">
+            <Link to="/" className="flex items-center text-white text-xl">
               <img src={logo} alt="Logo" className="w-12 h-12 mr-2" />
+              Simply Craving
             </Link>
             <Navbar />
           </div>

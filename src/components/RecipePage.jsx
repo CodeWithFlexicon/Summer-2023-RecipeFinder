@@ -61,11 +61,11 @@ const RecipePage = () => {
           <img src={recipe.img} alt={recipe.title} className="w-64 h-auto" />
         </div>
         <div className="recipe-page-details mb-4">
-          <p className="recipe-page-category text-gray-500">
+          <p className="recipe-page-category text-black-500">
             Category: {recipe.category.join(", ")}
           </p>
-          <p className="recipe-page-price text-gray-500">
-            Price: {recipe.price}
+          <p className="recipe-page-preparation text-black-500">
+            Preparation Time: {recipe.preparation} Minutes
           </p>
         </div>
         <div className="recipe-page-desc mb-6">{recipe.desc}</div>
